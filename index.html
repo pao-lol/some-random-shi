@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Something Random</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Something Random</h1>
+        <div id="quote-box">
+            <p id="quote">Loading...</p>
+            <button onclick="newQuote()">just click it</button>
+        </div>
+    </div>
+    <script>
+        const quotes = [
+            "You got this! Even if it's a small step, it's still progress.",
+            "Don't worry, be happy... and eat some chocolate!",
+            "You are amazing, just like a unicorn in a field of horses.",
+            "Keep smiling, because life is a beautiful ride!",
+            "If you stumble, make it part of the dance.",
+            "Dream big, sparkle more, and shine bright!",
+            "You are like a cloud—beautiful and fluffy!",
+            "Remember, even the longest journey starts with a single step!",
+            "You are the artist of your own destiny.",
+            "Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.",
+            "The best way to predict the future is to create it.",
+            "You are braver than you believe, stronger than you seem, and smarter than you think.",
+            "When life gives you lemons, make lemonade and add some sugar!",
+            "Believe in yourself and all that you are.",
+            "Your only limit is your mind.",
+            "You’re like a rainbow—beautiful and colorful!"
+        ];
+
+        function newQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById('quote').textContent = quotes[randomIndex];
+        }
+
+        // Load an initial quote
+        newQuote();
+    </script>
+</body>
+</html>
